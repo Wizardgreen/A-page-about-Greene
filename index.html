@@ -10,22 +10,30 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-<div id="header">
-  <div class="container">
-    <div class="home">
-      <a href="#">home</a>
-    </div>
-    <ul class="navgation">
-      <li><a href="#">about</a></li>
-      <li><a href="#">skills</a></li>
-      <li><a href="#">works</a></li>
-      <li><a href="#">contact</a></li>
-    </ul>
+<!-- <div id="header">
+  <div class="home" data-menuanchor="#home">
+    <a href="#home">home</a>
   </div>
-</div>
+  <ul class="navgation">
+    <li data-menuanchor="#about"><a href="#about">about</a></li>
+    <li data-menuanchor="#exp""><a href="#exp">exp</a></li>
+    <li data-menuanchor="#skills"><a href="#skills">skills</a></li>
+    <li data-menuanchor="#works"><a href="#works">works</a></li>
+    <li data-menuanchor="#contact"><a href="#contact">contact</a></li>
+  </ul>
+</div> -->
 
-<div class="content">
-  <div class="cover">
+<ul id="header">
+  <li data-menuanchor="#home"><a href="#home">home</a></li>
+  <li data-menuanchor="#about"><a href="#about">about</a></li>
+  <li data-menuanchor="#exp""><a href="#exp">experience</a></li>
+  <li data-menuanchor="#skills"><a href="#skills">skills</a></li>
+  <li data-menuanchor="#works"><a href="#works">works</a></li>
+  <li data-menuanchor="#contact"><a href="#contact">contact</a></li>
+</ul>
+
+<div  id="fullpage" class="content">
+  <div class="section cover">
     <div class="container">
       <h1 class="title">Hi</h1>
       <hr>
@@ -33,21 +41,21 @@
       <a href="#" class="btn">let's see</a>
     </div>
   </div>
-  <div class="about">
+  <div class="section about">
     <div class="container">
       <h2 class="title">about</h2>
       <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae totam cum fugiat reiciendis, soluta debitis qui quis minima suscipit, iure illo, recusandae alias non.</p>
     </div>
   </div>
-  <div class="exp">
+  <div class="section experience">
     <div class="container">
       <h2 class="title">experience</h2>
       <hr>
       <p class="des"></p>
     </div>
   </div>
-  <div class="skills">
+  <div class="section skills">
     <div class="container">
       <h2 class="title">skills</h2>
       <hr>
@@ -61,7 +69,7 @@
       <div class="col-4"></div>
     </div>
   </div>
-  <div class="works">
+  <div class="section works">
     <div class="container">
       <h2 class="title">works</h2>
       <hr>
@@ -73,7 +81,7 @@
       <div class="col-4"></div>
     </div>
   </div>
-  <div class="contact">
+  <div class="section contact">
     <div class="container">
       <h2 class="title">contact</h2>
       <hr>
@@ -81,14 +89,18 @@
       <a href="mailto:t0937383@gmail.com">t0937383@gmail.com</a>
     </div>
   </div>
+  <div class="section fp-auto-height footer">
+    <div class="warp">
+      <p class="copyRight">Copyright © Wizardgreen All rights reserved.</p>
+    </div>
+  </div>
 </div>
 
-<div id="footer">
-  <p class="copyRight">Copyright © XXXXX All rights reserved.</p>
-</div>
+
 
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/scrolloverflow.js"></script>
 <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+<script type="text/javascript" src="js/initFullPage.js"></script>
 </body>
 </html>

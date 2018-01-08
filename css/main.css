@@ -1,0 +1,18 @@
+a {
+  text-decoration: none; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+#header {
+  position: fixed;
+  z-index: 100; }
+
+.section {
+  text-align: center; }
+
+.warp {
+  margin: 2.5rem;
+  color: #ccc; }
