@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('#fullpage').fullpage({
-    anchors:['home', 'about', 'exp', 'skills', 'works', 'contact', 'footer'],
-    sectionsColor: ['', 'orange', '#C0C0C0', '#ADD8E6', '#ffffff', '#ffffff', '#222222'],
+    anchors:['home', 'about', 'exp', 'skill', 'works', 'contact', 'footer'],
+    sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#222'],
     scrollOverflow: true,
     menu: '#header'
   });

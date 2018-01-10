@@ -1,3 +1,9 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: arial, Microsoft JhengHei, '微軟正黑體'; }
+
 a {
   text-decoration: none; }
 
@@ -6,13 +12,106 @@ ul {
   padding: 0;
   list-style: none; }
 
+hr {
+  width: 3rem;
+  border: solid #d6b161;
+  border-width: .25rem 0 0 0; }
+
+.col-3 {
+  display: inline-block;
+  float: left;
+  width: 25%; }
+
+.square {
+  position: relative;
+  width: 13.5rem;
+  height: 13.5rem;
+  margin: 1rem auto;
+  border: 2px dashed #222;
+  border-radius: 10px;
+  background-color: #eee;
+  font-size: 10rem;
+  -webkit-transition: all .8s;
+  -o-transition: all .8s;
+  transition: all .8s; }
+  .square:hover {
+    border: 4px solid #d6b161;
+    background-color: #222; }
+    .square:hover .cap, .square:hover .des {
+      opacity: 0.8; }
+  .square .cap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #000;
+    opacity: 0;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s; }
+  .square .skillName {
+    position: relative;
+    top: -1rem;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #222; }
+  .square .des {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1rem 0 0 .5rem;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #eee;
+    opacity: 0;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s; }
+    .square .des .fa-check {
+      margin-right: .5rem; }
+  .square .html5 {
+    color: #e34f26; }
+  .square .css3 {
+    color: #4078c0; }
+  .square .github {
+    color: #6e5494; }
+  .square .js {
+    color: #f7df1e; }
+  .square .vue {
+    color: #42b883; }
+  .square .other {
+    color: #222; }
+
 #header {
   position: fixed;
   z-index: 100; }
 
+.container {
+  margin: 0 auto;
+  width: 90%; }
+
 .section {
   text-align: center; }
 
+.title {
+  margin: 0;
+  font-size: 2.6rem;
+  color: #222;
+  letter-spacing: .2rem;
+  text-transform: uppercase; }
+
 .warp {
-  margin: 2.5rem;
-  color: #ccc; }
+  margin: 2.5rem; }
+  .warp .copyRight {
+    color: #ccc; }
+
+@media (max-width: 575.99px) {
+  .col-12-mobile {
+    display: inline-block;
+    float: left;
+    width: 100%; } }
