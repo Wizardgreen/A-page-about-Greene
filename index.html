@@ -11,26 +11,20 @@
   <link rel="stylesheet" type="text/css" href="css/fa-svg-with-js.css">
 </head>
 <body>
-<!-- <div id="header">
-  <div class="home" data-menuanchor="#home">
-    <a href="#home">home</a>
-  </div>
-  <ul class="navgation">
-    <li data-menuanchor="#about"><a href="#about">about</a></li>
-    <li data-menuanchor="#exp""><a href="#exp">exp</a></li>
-    <li data-menuanchor="#skill"><a href="#skill">skill</a></li>
-    <li data-menuanchor="#works"><a href="#works">works</a></li>
-    <li data-menuanchor="#contact"><a href="#contact">contact</a></li>
-  </ul>
-</div> -->
 
-<ul id="header">
-  <li data-menuanchor="#home"><a href="#home">home</a></li>
-  <li data-menuanchor="#about"><a href="#about">about</a></li>
-  <li data-menuanchor="#exp""><a href="#exp">experience</a></li>
-  <li data-menuanchor="#skill"><a href="#skill">skill</a></li>
-  <li data-menuanchor="#works"><a href="#works">works</a></li>
-  <li data-menuanchor="#contact"><a href="#contact">contact</a></li>
+<div id="header">
+  <div class="container">
+    <div data-menuanchor="#home" class="toHome">
+      <a href="#home"><i class="fas fa-home"></i> home</a>
+    </div>
+    <ul class="nav">
+      <li data-menuanchor="#about"><a href="#about">about</a></li>
+      <li data-menuanchor="#exp""><a href="#exp">experience</a></li>
+      <li data-menuanchor="#skill"><a href="#skill">skill</a></li>
+      <li data-menuanchor="#works"><a href="#works">works</a></li>
+      <li data-menuanchor="#contact"><a href="#contact">contact</a></li>
+    </div>
+  </div>
 </ul>
 
 <div  id="fullpage" class="content">
@@ -39,7 +33,7 @@
       <h1 class="title">Hi</h1>
       <hr>
       <p class="des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, ipsum.</p>
-      <a href="#" class="btn">let's see</a>
+      <button id="btnGoDown">let's begin</button>
     </div>
   </div>
   <div class="section about">
@@ -56,36 +50,37 @@
       <p class="des"></p>
     </div>
   </div>
+
   <div class="section skill">
     <div class="container">
       <h2 class="title">skill</h2>
       <hr>
       <p class="des"></p>
-      <div class="col-3 col-12-mobile">
+      <div class="col-3 col-12-mobile col-6-m">
         <div class="square">
           <div class="cap"></div>
           <i class="icon html5 fab fa-html5"></i>
           <p class="skillName">HTML</p>
           <ul class="des">
-            <li><i class="fas fa-check"></i>善用語意化的命名結構</li>
-            <li><i class="fas fa-check"></i>Bootstrap 4</li>
-            <li><i class="fas fa-check"></i>Material Design Lite</li>
+            <li><i class="fas fa-check-square"></i>善用語意化的命名結構</li>
+            <li><i class="fas fa-check-square"></i>Bootstrap 4</li>
+            <li><i class="fas fa-check-square"></i>Material Design Lite</li>
           </ul>
         </div>
       </div>
-      <div class="col-3 col-12-mobile">
+      <div class="col-3 col-12-mobile col-6-m">
         <div class="square">
           <div class="cap"></div>
           <i class="icon css3 fab fa-css3-alt"></i>
           <p class="skillName">CSS</p>
           <ul class="des">
-            <li><i class="fas fa-check"></i>CSS 3</li>
-            <li><i class="fas fa-check"></i>Flex / RWD</li>
-            <li><i class="fas fa-check"></i>Scss / Less</li>
+            <li><i class="fas fa-check-square"></i>CSS 3</li>
+            <li><i class="fas fa-check-square"></i>Flex / RWD</li>
+            <li><i class="fas fa-check-square"></i>Scss / Less</li>
           </ul>
         </div>
       </div>
-      <div class="col-3 col-12-mobile">
+      <div class="col-3 col-12-mobile col-6-m">
         <div class="square">
           <div class="cap"></div>
           <i class="icon github fab fa-github"></i>
@@ -96,43 +91,43 @@
           </ul>
         </div>
       </div>
-      <div class="col-3 col-12-mobile">
+      <div class="col-3 col-12-mobile col-6-m">
         <div class="square">
           <div class="cap"></div>
           <i class="icon js fab fa-js"></i>
           <p class="skillName">Java Script</p>
           <ul class="des">
-            <li><i class="fas fa-check"></i>AJAX / JSON</li>
-            <li><i class="fas fa-check"></i>政府 Open Data</li>
-            <li><i class="fas fa-check"></i>Google Map API</li>
-            <li><i class="fas fa-check"></i>jQuery</li>
-            <li><i class="fas fa-check"></i>善用第三方插件</li>
+            <li><i class="fas fa-check-square"></i>jQuery</li>
+            <li><i class="fas fa-check-square"></i>AJAX / JSON</li>
+            <li><i class="fas fa-check-square"></i>政府 Open Data</li>
+            <li><i class="fas fa-check-square"></i>Google Map API</li>
+            <li><i class="fas fa-check-square"></i>善用第三方插件</li>
           </ul>
         </div>
       </div>
-      <div class="col-3 col-12-mobile">
+      <div class="col-3 col-12-mobile col-6-m">
         <div class="square">
           <div class="cap"></div>
           <i class="icon vue fab fa-vuejs"></i>
           <p class="skillName">Vue.js</p>
           <ul class="des">
-            <li><i class="fas fa-check"></i>Vue-CLI</li>
-            <li><i class="fas fa-check"></i>Vue-Router</li>
-            <li><i class="fas fa-check"></i>Vuex</li>
-            <li><i class="fas fa-check"></i>Vue.Apollo</li>
+            <li><i class="fas fa-check-square"></i>Vue-CLI</li>
+            <li><i class="fas fa-check-square"></i>Vue-Router</li>
+            <li><i class="fas fa-check-square"></i>Vuex</li>
+            <li><i class="fas fa-check-square"></i>Vue.Apollo</li>
           </ul>
         </div>
       </div>
-      <div class="col-3 col-12-mobile">
+      <div class="col-3 col-12-mobile col-6-m">
         <div class="square">
           <div class="cap"></div>
           <i class="icon other fas fa-list"></i>
           <p class="skillName">Other</p>
           <ul class="des">
-            <li><i class="fas fa-check"></i>Webpack</li>
-            <li><i class="fas fa-check"></i>Trello</li>
-            <li><i class="fas fa-check"></i>Scrum</li>
-            <li><i class="fas fa-check"></i>英文 - 中等對話 / 讀寫</li>
+            <li><i class="fas fa-check-square"></i>Webpack</li>
+            <li><i class="fas fa-check-square"></i>Trello</li>
+            <li><i class="fas fa-check-square"></i>Scrum</li>
+            <li><i class="fas fa-check-square"></i>英文 - 中等對話 / 讀寫</li>
           </ul>
         </div>
       </div>
@@ -156,7 +151,7 @@
       <h2 class="title">contact</h2>
       <hr>
       <h2 class="name">李乾</h2>
-      <a href="mailto:t0937383@gmail.com">t0937383@gmail.com</a>
+      <a class="mail" href="mailto:t0937383@gmail.com"><i class="far fa-envelope"></i> t0937383@gmail.com</a>
     </div>
   </div>
   <div class="section fp-auto-height footer">
@@ -165,7 +160,6 @@
     </div>
   </div>
 </div>
-
 
 
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
