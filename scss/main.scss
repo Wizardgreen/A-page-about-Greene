@@ -1,8 +1,9 @@
+$S-color: #eee;
 $T-color: #d6b161;
 
 * {
   box-sizing: border-box;
-  font-family: arial, Microsoft JhengHei, '微軟正黑體';
+  font-family: Spoqa Han Sans,Spoqa Han Sans JP,Noto Sans Korean,sans-serif,arial,Microsoft JhengHei,'微軟正黑體';
 }
 a {
   text-decoration: none;
@@ -19,13 +20,23 @@ hr {
   border: solid $T-color;
   border-width: .25rem 0 0 0; 
 }
+p {
+  line-height: .95rem;
+  text-shadow: 0 0 0.1px rgba(0,0,0,.3);
+}
 
 .col-3 {
   display: inline-block;
   float: left;
   width: 25%;
 }
-
+.cap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 .square {
   position: relative;
   width: 13.5rem;
@@ -42,11 +53,6 @@ hr {
     }
   }
   .cap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     border-radius: 10px;
     background-color: #000;
     opacity: 0;
@@ -74,7 +80,7 @@ hr {
     font-size: 1rem;
     line-height: 1.8rem;
     letter-spacing: 1px;
-    color: #eee;
+    color: $S-color;
     opacity: 0;
     transition: all 1s;
     .fa-check-square {
@@ -101,11 +107,15 @@ hr {
   }
 }
 
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
 #header {
   position: fixed;
   width: 100%;
   height: 2.5rem;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0,0,0,.6);
   z-index: 100;
   .container {
     display: flex;
@@ -122,27 +132,40 @@ hr {
   }
   a {
     margin-right: 1rem;
-    color: #eee;
+    color: $S-color;
     text-transform: capitalize;
     &:visited {
-      color: #eee;
+      color: $S-color;
     }
     &:hover {
       color: $T-color;
     }
   }
 }
-.container {
-  margin: 0 auto;
-  width: 80%;
-}
 .section {
   text-align: center;
   &.about {
-    background-image: url(../assets/image1.jpeg);
+    position: relative;
+    background-image: url("../assets/image1.jpeg");
     background-size: cover;
-    background-position: top center;
+    background-position: 50% 54%;
     background-repeat: no-repeat;
+    .cap {
+      background-color: rgba(0,0,0,.6);
+      z-index: 1;
+    }
+    .title, hr, p {
+      position: relative;
+      z-index: 2;
+    }
+    .title {
+      margin-top: 3rem;
+      color: $S-color;
+    }
+    p {
+      color: $S-color;
+      letter-spacing: 1px
+    }
   }
 }
 .title {
@@ -157,6 +180,42 @@ hr {
   margin: 2.5rem;
   .copyRight {
     color: #ccc;
+  }
+}
+.arrow_box {
+  width: 8rem;
+  height: 3rem;
+  position: absolute;
+  top: 3rem;
+  left: 26rem;
+  background: rgba(0,0,0,0);
+  border: 4px solid #eee;
+  z-index: 2;
+  &:after, &:before {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+    border-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0,0,0,0);
+    border-width: 20px;
+    margin-top: -20px;
+  }
+  &:before {
+    border-color: rgba(238, 238, 238, 0);
+    border-right-color: #eee;
+    border-width: 15px;
+    margin-top: -15px;
+  }
+  p {
+    margin: .3rem;
+    line-height: 10px;
   }
 }
 
