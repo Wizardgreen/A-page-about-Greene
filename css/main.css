@@ -1,6 +1,8 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: Spoqa Han Sans,Spoqa Han Sans JP,Noto Sans Korean,sans-serif,arial,Microsoft JhengHei,'微軟正黑體'; }
 
 a {
   text-decoration: none;
@@ -23,7 +25,7 @@ p {
   line-height: .95rem;
   text-shadow: 0 0 0.1px rgba(0, 0, 0, 0.3); }
 
-.col-3, .col-4 {
+.col-3, .col-4, .col-12 {
   display: inline-block;
   float: left; }
 
@@ -32,6 +34,9 @@ p {
 
 .col-4 {
   width: 33%; }
+
+.col-12 {
+  width: 100%; }
 
 .container {
   margin: 0 auto;
@@ -192,20 +197,6 @@ p {
     -ms-flex-pack: center;
     justify-content: center;
     height: 70vh; }
-  .section.experience .boy .picture {
-    position: relative;
-    right: -14rem;
-    height: 70vh;
-    background-image: url("../assets/boy.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-radius: 10px; }
-  .section.experience .man .picture {
-    height: 70vh;
-    background-image: url("../assets/man.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-radius: 10px; }
 
 .timeLine {
   position: relative; }
@@ -252,93 +243,159 @@ p {
     font-weight: 700;
     letter-spacing: 1px; }
     .timeLine .circle.babyBlue {
+      background-color: #89cff0;
       bottom: 1.5rem;
       right: 2rem;
-      background-color: #89cff0;
       -webkit-animation: r1 infinite linear 3s;
-      animation: r1 infinite linear 3s; }
+      animation: r1 infinite linear 3s;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .timeLine .circle.babyBlue:hover {
+        width: 12rem;
+        height: 12rem;
+        border: 4px solid #89cff0;
+        border-radius: 10px;
+        background-color: #eee;
+        opacity: .85;
+        z-index: 2; }
     .timeLine .circle.orange {
+      background-color: #ffb469;
       bottom: 3.5rem;
       right: -4.5rem;
-      background-color: #ffb469;
       -webkit-animation: r3 infinite linear 5s;
-      animation: r3 infinite linear 5s; }
+      animation: r3 infinite linear 5s;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .timeLine .circle.orange:hover {
+        width: 12rem;
+        height: 12rem;
+        border: 4px solid #ffb469;
+        border-radius: 10px;
+        background-color: #eee;
+        opacity: .85;
+        z-index: 2; }
     .timeLine .circle.hotPink {
+      background-color: #ff69b4;
       bottom: 8rem;
       right: 2.3rem;
-      background-color: #ff69b4;
       -webkit-animation: r4 infinite linear 3s;
-      animation: r4 infinite linear 3s; }
+      animation: r4 infinite linear 3s;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .timeLine .circle.hotPink:hover {
+        width: 12rem;
+        height: 12rem;
+        border: 4px solid #ff69b4;
+        border-radius: 10px;
+        background-color: #eee;
+        opacity: .85;
+        z-index: 2; }
     .timeLine .circle.green {
+      background-color: #42b883;
       bottom: 14rem;
       right: -6rem;
-      background-color: #42b883;
       -webkit-animation: r3 infinite linear 9s;
-      animation: r3 infinite linear 9s; }
+      animation: r3 infinite linear 9s;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .timeLine .circle.green:hover {
+        width: 12rem;
+        height: 12rem;
+        border: 4px solid #42b883;
+        border-radius: 10px;
+        background-color: #eee;
+        opacity: .85;
+        z-index: 2; }
     .timeLine .circle.yellow {
+      background-color: #f7df1e;
       bottom: 18rem;
       right: 2rem;
-      background-color: #f7df1e;
       -webkit-animation: r2 infinite linear 4s;
-      animation: r2 infinite linear 4s; }
+      animation: r2 infinite linear 4s;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .timeLine .circle.yellow:hover {
+        width: 12rem;
+        height: 12rem;
+        border: 4px solid #f7df1e;
+        border-radius: 10px;
+        background-color: #eee;
+        opacity: .85;
+        z-index: 2; }
     .timeLine .circle.purple {
+      background-color: #b469ff;
       bottom: 21rem;
       right: -5rem;
-      background-color: #b469ff;
       -webkit-animation: r1 infinite linear 5s;
-      animation: r1 infinite linear 5s; }
+      animation: r1 infinite linear 5s;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .timeLine .circle.purple:hover {
+        width: 12rem;
+        height: 12rem;
+        border: 4px solid #b469ff;
+        border-radius: 10px;
+        background-color: #eee;
+        opacity: .85;
+        z-index: 2; }
     .timeLine .circle.bg-1 {
+      background-color: #8D6E63;
       bottom: 10rem;
       right: -6rem;
-      background-color: #8D6E63;
       -webkit-animation: r3 infinite linear 6s;
       animation: r3 infinite linear 6s; }
     .timeLine .circle.bg-2 {
+      background-color: #5C6BC0;
       bottom: 14rem;
       right: 2.5rem;
-      background-color: #5C6BC0;
       -webkit-animation: r4 infinite linear 2s;
       animation: r4 infinite linear 2s; }
     .timeLine .circle.bg-3 {
+      background-color: #EF5350;
       bottom: 24rem;
       right: 3rem;
-      background-color: #EF5350;
       -webkit-animation: r2 infinite linear 5s;
       animation: r2 infinite linear 5s; }
     .timeLine .circle.bg-4 {
+      background-color: #FFCA28;
       bottom: 15rem;
       right: -2rem;
-      background-color: #FFCA28;
       -webkit-animation: r1 infinite linear 3s;
       animation: r1 infinite linear 3s; }
     .timeLine .circle.bg-5 {
+      background-color: #1976D2;
       bottom: 8.5rem;
       right: -2rem;
-      background-color: #1976D2;
       -webkit-animation: r4 infinite linear 8s;
       animation: r4 infinite linear 8s; }
     .timeLine .circle.bg-6 {
+      background-color: #00E676;
       bottom: 22rem;
       right: 6rem;
-      background-color: #00E676;
       -webkit-animation: r3 infinite linear 6s;
       animation: r3 infinite linear 6s; }
     .timeLine .circle.bg-7 {
+      background-color: #9E9E9E;
       bottom: 5rem;
       right: 7rem;
-      background-color: #9E9E9E;
       -webkit-animation: r4 infinite linear 6s;
       animation: r4 infinite linear 6s; }
     .timeLine .circle.bg-8 {
+      background-color: #69F0AE;
       bottom: 15rem;
       right: 7rem;
-      background-color: #69F0AE;
       -webkit-animation: r4 infinite linear 10s;
       animation: r4 infinite linear 10s; }
     .timeLine .circle.bg-9 {
+      background-color: #FF5252;
       bottom: 19rem;
       right: -6rem;
-      background-color: #FF5252;
       -webkit-animation: r2 infinite linear 3s;
       animation: r2 infinite linear 3s; }
     .timeLine .circle.xs {

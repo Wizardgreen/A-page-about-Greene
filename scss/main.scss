@@ -4,6 +4,7 @@ $T-color: #d6b161;
 // globl setting
 * {
   box-sizing: border-box;
+  font-family: Spoqa Han Sans,Spoqa Han Sans JP,Noto Sans Korean,sans-serif,arial,Microsoft JhengHei,'微軟正黑體';
 }
 a {
   text-decoration: none;
@@ -26,7 +27,7 @@ p {
 }
 
 // custom class
-.col-3, .col-4 {
+.col-3, .col-4, .col-12 {
   display: inline-block;
   float: left;
 }
@@ -35,6 +36,9 @@ p {
 }
 .col-4 {
   width: 33%;
+}
+.col-12 {
+  width: 100%;
 }
 .container {
   margin: 0 auto;
@@ -189,31 +193,24 @@ p {
       justify-content: center;
       height: 70vh;
     }
-    .boy {
-      .picture {
-        position: relative;
-        right: -14rem;
-        height: 70vh;
-        background-image: url("../assets/boy.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        border-radius: 10px;
-      }
-    }
-    .man {
-      .picture {
-        height: 70vh;
-        background-image: url("../assets/man.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        border-radius: 10px;
-      }
-    }
   }
 }
-
-@mixin round($type, $s) {
-  animation: $type infinite linear $s;
+@mixin round($bottom, $right, $type, $sec) {
+  bottom: $bottom;
+  right: $right;
+  animation: $type infinite linear $sec;
+}
+@mixin showJob($border-color) {
+  transition: all .3s;
+  &:hover {
+    width: 12rem;
+    height: 12rem;
+    border: 4px solid $border-color;
+    border-radius: 10px;
+    background-color: #eee;
+    opacity: .85;
+    z-index: 2;
+  }
 }
 .timeLine {
   position: relative;
@@ -234,8 +231,8 @@ p {
     }
   }
   .arrow {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-bottom: 20px solid #222;
     border-right: 13px solid transparent;
     border-left: 13px solid transparent;
@@ -250,95 +247,71 @@ p {
     font-weight: 700;
     letter-spacing: 1px;
     &.babyBlue {
-      bottom: 1.5rem;
-      right: 2rem;
       background-color: #89cff0;
-      @include round(r1, 3s);
+      @include round(1.5rem, 2rem, r1, 3s);
+      @include showJob(#89cff0);
     }
     &.orange {
-      bottom: 3.5rem;
-      right: -4.5rem;
       background-color: #ffb469;
-      @include round(r3, 5s);
+      @include round(3.5rem, -4.5rem, r3, 5s);
+      @include showJob(#ffb469);
     }
     &.hotPink {
-      bottom: 8rem;
-      right: 2.3rem;
       background-color: #ff69b4;
-      @include round(r4, 3s);
+      @include round(8rem, 2.3rem, r4, 3s);
+      @include showJob(#ff69b4);
     }
     &.green {
-      bottom: 14rem;
-      right: -6rem;
       background-color: #42b883;
-      @include round(r3, 9s);
+      @include round(14rem, -6rem, r3, 9s);
+      @include showJob(#42b883);
     }
     &.yellow {
-      bottom: 18rem;
-      right: 2rem;
       background-color: #f7df1e;
-      @include round(r2, 4s);
+      @include round(18rem, 2rem, r2, 4s);
+      @include showJob(#f7df1e);
     }
     &.purple {
-      bottom: 21rem;
-      right: -5rem;
       background-color: #b469ff;
-      @include round(r1, 5s);
+      @include round(21rem, -5rem, r1, 5s);
+      @include showJob(#b469ff);
     }
     // bg circle
     &.bg-1 {
-      bottom: 10rem;
-      right: -6rem;
       background-color: #8D6E63;
-      @include round(r3, 6s);
+      @include round(10rem, -6rem, r3, 6s);
     }
     &.bg-2 {
-      bottom: 14rem;
-      right: 2.5rem;
       background-color: #5C6BC0;
-      @include round(r4, 2s);
+      @include round(14rem, 2.5rem, r4, 2s);
     }
     &.bg-3 {
-      bottom: 24rem;
-      right: 3rem;
       background-color: #EF5350;
-      @include round(r2, 5s);
+      @include round(24rem, 3rem, r2, 5s);
     }
     &.bg-4 {
-      bottom: 15rem;
-      right: -2rem;
       background-color: #FFCA28;
-      @include round(r1, 3s);
+      @include round(15rem, -2rem, r1, 3s);
     }
     &.bg-5 {
-      bottom: 8.5rem;
-      right: -2rem;
       background-color: #1976D2;
-      @include round(r4, 8s);
+      @include round(8.5rem, -2rem, r4, 8s);
     }
     &.bg-6 {
-      bottom: 22rem;
-      right: 6rem;
       background-color: #00E676;
-      @include round(r3, 6s);
+      @include round(22rem, 6rem, r3, 6s);
     }
     &.bg-7 {
-      bottom: 5rem;
-      right: 7rem;
       background-color: #9E9E9E;
-      @include round(r4, 6s);
+      @include round(5rem, 7rem, r4, 6s);
     }
     &.bg-8 {
-      bottom: 15rem;
-      right: 7rem;
       background-color: #69F0AE;
-      @include round(r4, 10s);
+      @include round(15rem, 7rem, r4, 10s);
     }
     &.bg-9 {
-      bottom: 19rem;
-      right: -6rem;
       background-color: #FF5252;
-      @include round(r2, 3s);
+      @include round(19rem, -6rem, r2, 3s);
     }
     // size
     &.xs {
