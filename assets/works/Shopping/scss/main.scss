@@ -1,0 +1,101 @@
+$white: #FDFDFF;
+$gary: #C6C5B9;
+$blue: #62929E;
+$darkblue: #546A7B;
+$border: 3px solid #393D3F;
+* {
+  box-sizing: border-box;
+  font-family: Spoqa Han Sans,Spoqa Han Sans JP,Noto Sans Korean,sans-serif,arial,Microsoft JhengHei,'微軟正黑體';
+  font-weight: 700;
+}
+body {
+  background-color: $darkblue;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+section {
+  display: inline-block;
+}
+
+.container {
+  width: 85%;
+  margin: 20% auto;
+  border: $border;
+  background-color: $white;
+}
+.header {
+  background-color: $blue;
+  height: 4rem;
+  border-bottom: $border;
+  .title {
+    margin: 0 1.5rem;
+    color: $white;
+    line-height: 4rem;
+  }
+}
+.content {
+  width: 90%;
+  margin: 0 auto;
+}
+.input-form {
+  display: flex;
+  align-items: center; 
+  height: 6rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: $border;
+  padding: .5rem;
+  input, button {
+    border: $border;
+  }
+  input {
+    width: 65%;
+    margin-left: .1rem;
+  }
+}
+.listWarp {
+  width: 95%;
+  margin: 0 auto;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2.5rem;
+  margin-bottom: .8rem;
+  border: $border;
+  .name {
+    margin-left: .2rem;
+  }
+  .warp {
+    margin-right: .2rem;
+    .del {
+      padding: 5px 10px;
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      font-size: 1.3rem;
+    }
+  }
+}
+.total {
+  padding: 0 .2rem 0 .2rem;
+  background-color: $blue;
+  color: $white;
+  @extend .item;
+  .sum, .count {
+    letter-spacing: 1px;
+  }
+  .count {
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 720px) {
+  .container {
+    width: 35%; 
+    margin: 5% auto;  
+  }
+}

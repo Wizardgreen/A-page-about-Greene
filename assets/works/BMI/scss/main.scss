@@ -1,0 +1,241 @@
+$brandColor: #FFD366;
+$primaryWordColor: #424242;
+$secondaryWordColor: #4A4A4A;
+$green: #86D73F;
+$blue: #31BAF9;
+$orange1: #FF982D;
+$orange2: #FF6C03;
+$red: #FF1200;
+
+@mixin allCenter(){
+	display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+* {
+	font-family: Microsoft JhengHei;
+}
+body {
+	background-color: #eee;
+}
+p {
+	margin: 0;
+	font-size: 18px;
+	color: $brandColor;
+}
+input {
+	width: 250px;
+	height: 40px;
+	background-color: rgba(255,255,255,0.18);
+	margin: 5px 0 10px 0;
+	border: 2px solid #FFD366;
+	border-radius: 10px;
+	padding: 0 10px;
+	color: rgba(255,255,255,0.50);
+	font-size: 24px;
+}
+span {
+	font-size: 20px;
+	color: $secondaryWordColor;
+}
+.title {
+	text-align: center;
+	margin: 50px 0;
+	color: $primaryWordColor;
+	font-size: 24px;
+}
+.sTitle, .time {
+	margin-right: 3px;
+	color: $primaryWordColor;
+	font-size: 12px;
+}
+#btnCalculate {
+	position: relative;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	transition: all 0.5s;
+	.hits {
+		font-size: 24px;
+	}
+	.valueOnBtn {
+		font-size: 32px;
+	}
+	.BMIOnBtn {
+		font-size: 14px;
+	}
+	.loop {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 30px;
+		height: 30px;
+		margin: 0;
+		border: 3px solid #424242;
+		border-radius: 50%;
+		background-image: url('../assets/icons_loop.png');
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	&.default {
+		border: none;
+		background-color: $brandColor;
+		color: $primaryWordColor;
+		font-size: 24px;
+		.hits {
+			display: block;
+			font-weight: 600;
+		}
+		.loop, .valueOnBtn, .BMIOnBtn {
+			display: none;
+		}
+		&:hover {
+			box-shadow: 0 1px 6px 3px rgba(255,196,50,0.64);
+		}
+		&:active {
+			background-color: #DEA821;
+		}
+	}
+	&.green {
+		border: 6px solid $green;
+		background-color: $primaryWordColor;
+		.valueOnBtn, .BMIOnBtn {
+			color: $green;
+		}
+		.hits {
+			display: none;
+		}
+		.loop {
+			background-color: $green;
+		}
+		.loop, .valueOnBtn, .BMIOnBtn {
+			display: block;
+		}
+	}
+	&.blue {
+		border: 6px solid $blue;
+		background-color: $primaryWordColor;
+		.valueOnBtn, .BMIOnBtn {
+			color: $blue;
+		}
+		.hits {
+			display: none;
+		}
+		.loop {
+			background-color: $blue;
+		}
+		.loop, .valueOnBtn, .BMIOnBtn {
+			display: block;
+		}
+	}
+	&.orange1 {
+		border: 6px solid $orange1;
+		background-color: $primaryWordColor;
+		.valueOnBtn, .BMIOnBtn {
+			color: $orange1;
+		}
+		.hits {
+			display: none;
+		}
+		.loop {
+			background-color: $orange1;
+		}
+		.loop, .valueOnBtn, .BMIOnBtn {
+			display: block;
+		}
+	}
+	&.orange2 {
+		border: 6px solid $orange2;
+		background-color: $primaryWordColor;
+		.valueOnBtn, .BMIOnBtn {
+			color: $orange2;
+		}
+		.hits {
+			display: none;
+		}
+		.loop {
+			background-color: $orange2;
+		}
+		.loop, .valueOnBtn, .BMIOnBtn {
+			display: block;
+		}
+	}
+	&.red {
+		border: 6px solid $red;
+		background-color: $primaryWordColor;
+		.valueOnBtn, .BMIOnBtn {
+			color: $red;
+		}
+		.hits {
+			display: none;
+		}
+		.loop {
+			background-color: $red;
+		}
+		.loop, .valueOnBtn, .BMIOnBtn {
+			display: block;
+		}
+	}
+}
+.container {
+	width: 620px;
+	height: 100%;
+	margin: 0 auto;
+}
+.calculator	{
+	width: 100%;
+	height: 300px;
+	margin: 0 auto;
+	background-color: #424242;
+	.container {
+		@include allCenter();
+	}
+}
+.list {
+	list-style: none;
+	margin-bottom: 70px;
+	padding: 0;
+	li {
+		@include allCenter();
+		position: relative;
+		margin-bottom: 10px;
+		width: 100%;
+		height: 62px;
+		background-color: #fff;
+	}
+	.cell {
+		display: flex;
+    align-items: center;
+	}
+	.lightBar {
+    position: absolute;
+    left:0;
+		width: 7px;
+		height: 62px;
+		box-shadow: 2px 0 3px 0 rgba(134,215,63,0.29);
+		&.green {
+			background: $green;
+		}
+		&.blue {
+			background: $blue;
+		}
+		&.orange1 {
+			background: $orange1;
+		}
+		&.orange2 {
+			background: $orange2;
+		}
+		&.red {
+			background: $red;
+		}
+	}
+}
+.footer {
+	@include allCenter()
+	position: relative;
+	bottom: 0;
+	background-color: $brandColor;
+	width: 100%;
+	height: 90px;
+}

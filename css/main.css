@@ -60,8 +60,8 @@ p {
   -o-transition: all .8s;
   transition: all .8s; }
   .square:hover {
-    border: 4px solid #d6b161;
-    background-color: #222; }
+    background-color: #222;
+    border: 4px solid #d6b161; }
     .square:hover .cap, .square:hover .des {
       opacity: 0.8; }
   .square .cap {
@@ -71,14 +71,6 @@ p {
     -webkit-transition: all 1s;
     -o-transition: all 1s;
     transition: all 1s; }
-  .square .skillName {
-    position: relative;
-    top: -1rem;
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #222;
-    letter-spacing: 1px; }
   .square .des {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -108,18 +100,6 @@ p {
     transition: all 1s; }
     .square .des .fa-check-square {
       margin-right: .5rem; }
-  .square .html5 {
-    color: #e34f26; }
-  .square .css3 {
-    color: #4078c0; }
-  .square .github {
-    color: #6e5494; }
-  .square .js {
-    color: #f7df1e; }
-  .square .vue {
-    color: #42b883; }
-  .square .other {
-    color: #222; }
 
 .title {
   margin: 0;
@@ -186,6 +166,26 @@ p {
     .section.about p {
       color: #eee;
       letter-spacing: 1px; }
+  .section.skill .skillName {
+    position: relative;
+    top: -1rem;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 1px; }
+  .section.skill .html5 {
+    color: #e34f26; }
+  .section.skill .css3 {
+    color: #4078c0; }
+  .section.skill .github {
+    color: #6e5494; }
+  .section.skill .js {
+    color: #f7df1e; }
+  .section.skill .vue {
+    color: #42b883; }
+  .section.skill .other {
+    color: #222; }
   .section.experience .info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -197,6 +197,25 @@ p {
     -ms-flex-pack: center;
     justify-content: center;
     height: 70vh; }
+  .section.works .square {
+    width: 20rem;
+    height: 13rem; }
+    .section.works .square.BMI {
+      background: url("../assets/BMI.PNG") center top no-repeat;
+      background-size: cover; }
+    .section.works .square.shopping {
+      background: url("../assets/list.PNG") center top no-repeat;
+      background-size: cover; }
+    .section.works .square.travel {
+      background: url("../assets/travle.PNG") center top no-repeat;
+      background-size: cover; }
+  .section.works .title, .section.works .name {
+    color: #eee; }
+  .section.works .name {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px; }
 
 .timeLine {
   position: relative; }
