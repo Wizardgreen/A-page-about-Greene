@@ -21,10 +21,6 @@ function addItem() {
     alert('請輸入資料!');
     return
   };
-  if(typeof(price.value) !== 'Number'){
-    alert('價格應為數字!')
-    return
-  }
   let obj = {};
   obj.name = name.value;
   obj.price = price.value;
