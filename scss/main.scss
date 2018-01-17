@@ -44,6 +44,11 @@ p {
   margin: 0 auto;
   width: 80%;
 }
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .cap {
   position: absolute;
   top: 0;
@@ -184,6 +189,9 @@ p {
     .vue {
       color: #42b883;
     }
+    .node {
+      color: #44883e;
+    }
     .other {
       color: #222;
     }
@@ -222,6 +230,45 @@ p {
       font-size: 22px;
       font-weight: 500;
       letter-spacing: 1px;
+    }
+  }
+  &.contact {
+    .avater {
+      width: 10rem;
+      height: 10rem;
+      margin: 2rem auto;
+      border: 3px solid #222;
+      border-radius: 50%;
+      background:url('../assets/avater.png') center no-repeat;
+      background-size: cover;
+    }
+    .socialMedia {
+      display: flex;
+      justify-content: center;
+      width: 200px;
+      margin: 1rem auto;
+      padding: .2rem;
+      border-radius: 20px;
+      background-color: #222;
+      li {
+        float: left;
+        margin: 0 1rem;
+        a {
+          color: $T-color;
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .mail {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: .3rem 1rem;
+      border-radius: 15px;
+      background-color: #222;
+      a {
+        color: $T-color;
+        font-size: 1.2rem;
+      }
     }
   }
 }
