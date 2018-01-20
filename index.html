@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Greene's Personal Website</title>
+  <title>Greene's Profile</title>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -12,28 +12,38 @@
 </head>
 <body>
 
-<div id="header">
+<nav id="header">
   <div class="container">
     <div data-menuanchor="#home" class="toHome">
       <a href="#home"><i class="fas fa-home"></i> home</a>
     </div>
-    <ul class="nav">
-      <li data-menuanchor="#about"><a href="#about">about</a></li>
-      <li data-menuanchor="#exp""><a href="#exp">experience</a></li>
-      <li data-menuanchor="#skill"><a href="#skill">skill</a></li>
-      <li data-menuanchor="#works"><a href="#works">works</a></li>
-      <li data-menuanchor="#contact"><a href="#contact">contact</a></li>
-    </div>
+      <ul class="nav">
+        <li data-menuanchor="#about"><a href="#about">about</a></li>
+        <li data-menuanchor="#exp""><a href="#exp">experience</a></li>
+        <li data-menuanchor="#skill"><a href="#skill">skill</a></li>
+        <li data-menuanchor="#works"><a href="#works">works</a></li>
+        <li data-menuanchor="#contact"><a href="#contact">contact</a></li>
+      </ul> 
   </div>
-</ul>
+</nav>
 
 <div  id="fullpage" class="content">
   <div class="section cover">
     <div class="container">
-      <h1 class="title">Hi</h1>
+      <h1 class="title">Greene's Profile</h1>
       <hr>
-      <p class="des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, ipsum.</p>
-      <button id="btnGoDown">let's begin</button>
+      <p class="des">
+        Hi there !
+        <br/><br/>
+        Now your watching my personal website ver 1.0,
+        <br/><br/>
+        I build this website for give people like you a great first impression.
+        <br/><br/>
+        But, the ultimate goal is let myself become a Front-End Developer !
+        <br/><br/>
+        Okya, stop blablabla, hold tight and get ready for it...
+      </p>
+      <button id="btnGoDown">Let's Begin</button>
     </div>
   </div>
 
@@ -52,9 +62,9 @@
       <p>
         嗨，我的名字叫李乾 (ㄑ一ㄢˊ)
         <br/><br/>
-        正努力著成為一位稱職的前端工程師
+        英文名字則是 Greene，我努力成為一位稱職的前端工程師
         <br/><br/>
-        不論設計、前端、後端，各種技術總是令我著迷不己
+        不論設計、前端、後端，各種技術與巧思總是令我著迷不己
         <br/><br/>
         而且我更熱愛用這些所學寫出更精簡好讀的 Code，與夥伴們創作更高品質的作品 !
       </p>
@@ -66,7 +76,57 @@
       <h2 class="title">experience</h2>
       <hr>
       <div class="warp">
-        <div class="col-12 info">
+        <div class="col-3 detail">
+          <div class="expCard translate">
+            <div class="date"><i class="fas fa-briefcase"></i> 2009 - 2011</div>
+            <div class="content">
+              <div class="employer">翎盛科技</div>
+              <hr>
+              <div class="position">外包英文翻譯</div>
+              <div class="des">
+                <p>負責遊戲文本的校稿、後續活動與Patch的翻譯。</p>
+                <ul>
+                  <p class="counting">參與作品</p>
+                  <li></i> Dawn of war 2</li>
+                  <li></i> Dawn of war 2 : Chaos Rising</li>
+                  <li></i> Dawn of war 2 : Retribution</li>
+                  <li></i> Space Marine</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="expCard pianoClub">
+            <div class="date"><i class="fas fa-music"></i> 2014 - 2015</div>
+            <div class="content">
+              <div class="employer">鋼琴研習社</div>
+              <hr>
+              <div class="position">社團行政、社長</div>
+              <div class="des">
+                <p>原本搖搖欲墜的社團，在我與一批新血接手後，努力經營才得以重振旗鼓，隨後我當上了社長的職位，並舉辦多場跨社團或跨校性的表演活動。</p>
+                <ul>
+                  <p class="counting">舉辦活動</p>
+                  <li>兩次成果發表</li>
+                  <li>兩次跨社表演</li>
+                  <li>一次跨校成果發表</li>
+                  <li>文藝四興 - 六社聯合校慶表演</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="expCard shopping">
+            <div class="date"><i class="fas fa-shopping-cart"></i> 2016 - Now</div>
+            <div class="content">
+              <div class="employer">蝦皮拍賣</div>
+              <hr>
+              <div class="position">自行網拍</div>
+              <div class="des">
+                <p>經營在蝦皮上經營鋼化玻璃買賣，成為整個內同品牌中"讚"量最多的賣家。</p>
+                <p class="axk">蝦皮搜尋 axkddi </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 tree">
           <div class="timeLine">
             <div class="circle purple xl">
               <span calss="year">2017</span>
@@ -98,6 +158,54 @@
             <div class="circle bg-9 s"></div>
             <div class="arrow"></div>
             <div class="line"></div>
+          </div>
+        </div>
+        <div class="col-3 detail">
+          <div class="expCard government">
+            <div class="date"><i class="fas fa-building"></i> 2012 - 2014</div>
+            <div class="content">
+              <div class="employer">屏東縣政府</div>
+              <hr>
+              <div class="position">約僱人員</div>
+              <div class="des">
+                <p>大學時期的暑假曾數次在屏東縣政府的資訊管理課當任約僱人員，主要是與協助外包的駐點工程師處理各類電腦、網頁問題。</p>
+              </div>
+            </div>
+          </div>
+          <div class="expCard campaign">
+            <div class="date"><i class="fab fa-font-awesome-flag"></i> 2015 - 2016</div>
+            <div class="content">
+              <div class="employer">立委競選團隊</div>
+              <hr>
+              <div class="position">活動助理</div>
+              <div class="des">
+                <p>團隊策畫與實施超過數百場選戰活動，最後推翻了屏東市區多年來的局面。</p>
+                <ul>
+                  <p class="counting">活動類型</p>
+                  <li>區域掃街</li>
+                  <li>造勢晚會</li>
+                  <li>講壇會</li>
+                  <li>總統候選人親臨的大型車隊掃街</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="expCard technical">
+            <div class="date"><i class="fas fa-cubes"></i> 2017</div>
+            <div class="content">
+              <div class="employer">旭東環保</div>
+              <hr>
+              <div class="position">技術人員</div>
+              <div class="des">
+                <p>透過射出機將環保材料製成大型浮板、管線防護套等等能源運輸用的組件。</p>
+                <ul>
+                  <p class="counting">工作內容</p>
+                  <li>品質管理</li>
+                  <li>機台故障排除</li>
+                  <li>管理外籍勞工</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -214,8 +322,8 @@
               <li>透過 LocalStorage 儲存使用資訊</li>
             </ul>
           </div>
-        </a>
         <p class="name">BMI 計算機</p>
+        </a>
       </div>
       <div class="col-4 col-6-m col-12-mobile">
         <a href="assets/works/Shopping/index.html" target="_blank">
@@ -227,8 +335,8 @@
               <li>透過ES6節省記憶體</li>
             </ul>
           </div>
+          <p class="name">購物清單</p>
         </a>
-        <p class="name">購物清單</p>
       </div>
       <div class="col-4 col-6-m col-12-mobile">
         <a href="assets/works/KHTravel/index.html" target="_blank">
@@ -240,8 +348,8 @@
               <li>JS 撰寫頁面切換功能</li>
             </ul>
           </div>
-        </a>
         <p class="name">高雄市旅遊資訊</p>
+        </a>
       </div>
     </div>
   </div>
@@ -250,8 +358,8 @@
     <div class="container">
       <h2 class="title">contact</h2>
       <hr>
-      <div class="avater"></div>
       <div class="info">
+        <div class="avater"></div>
         <h2 class="name">李乾 ( Greene )</h2>
         <ul class="socialMedia clearfix">
           <li calss="faceBook"><a href="https://www.facebook.com/chien.lee.319" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
@@ -268,7 +376,7 @@
   </div>
 
   <div class="section fp-auto-height footer">
-    <p class="copyRight">Copyright © Wizardgreen All rights reserved.</p>
+    <p class="copyRight">Copyright © Greene All rights reserved.</p>
   </div>
 </div>
 

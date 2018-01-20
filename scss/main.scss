@@ -21,13 +21,9 @@ hr {
   border: solid $T-color;
   border-width: .25rem 0 0 0; 
 }
-p {
-  line-height: .95rem;
-  text-shadow: 0 0 0.1px rgba(0,0,0,.3);
-}
 
 // custom class
-.col-3, .col-4, .col-12 {
+.col-3, .col-4, .col-6, .col-12 {
   display: inline-block;
   float: left;
 }
@@ -36,6 +32,9 @@ p {
 }
 .col-4 {
   width: 33%;
+}
+.col-6 {
+  width: 50%
 }
 .col-12 {
   width: 100%;
@@ -63,10 +62,13 @@ p {
   margin: 1rem auto;
   border-radius: 10px;
   font-size: 10rem;
+  background-color: #fdfdff;
+  box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
   transition: all .8s;
   &:hover {
     background-color: #222;
     border: 4px solid $T-color;
+    box-shadow: none;
     .cap, .des {
       opacity: 0.8;
     }
@@ -141,6 +143,24 @@ p {
 }
 .section {
   text-align: center;
+  &.cover {
+    .des {
+      margin-top: 5rem;
+    }
+    #btnGoDown {
+      margin-top: 1.5rem;
+      padding: .5rem .9rem;
+      border: 1.5px solid #222;
+      border-radius: 20px;
+      background-color: transparent;
+      color: #222;
+      transition: all .7s;
+      &:hover {
+      background-color: #222;
+      color: $T-color;
+      }
+    }
+  }
   &.about {
     position: relative;
     background-image: url("../assets/image1.jpeg");
@@ -197,7 +217,58 @@ p {
     }
   }
   &.experience {
-    .info {
+    .warp {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .expCard {
+      position: relative;
+      min-height: 40vh;
+      padding: 1rem;
+      background-color: #fdfdfd;
+      border-radius: 10px;
+      box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
+      text-shadow: 0 0 0.1px rgba(0,0,0,.3);
+      .date {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 8px;
+        border-top-left-radius: 10px;
+        background-color: #222;
+        color: $T-color;
+      }
+      .content {
+        margin-top: 2rem;
+        .employer {
+          margin-bottom: .5rem;
+          font-size: 22px;
+          font-weight: 700;
+        }
+        .des {
+          text-align: left;
+          line-height: 1.2rem;
+          letter-spacing: .5px;
+          .counting {
+            margin: 0 0 .5rem 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+          }
+          .axk {
+            display: inline-block;
+            margin: 0 auto;
+            padding: 10px 8px;
+            border-radius: 20px;
+            color: #fdfdfd;
+            background-color: orange;
+            letter-spacing: 0;
+          }
+        }
+      }
+    }
+    .tree {
       display: flex;
       align-items: flex-end;
       justify-content: center;
@@ -222,22 +293,30 @@ p {
         @include work('../assets/travle.PNG');
       }
     }
-    .title, .name {
-      color: $S-color;
-    }
     .name {
       margin: 0;
+      color: #222;
       font-size: 22px;
       font-weight: 500;
       letter-spacing: 1px;
     }
   }
   &.contact {
+    hr {
+      margin-bottom: 1.5rem;
+    }
+    .info {
+      padding: .5rem;
+      width: 30%;
+      margin: 0 auto;
+      background-color: #fdfdff;
+      border-radius: 20px;
+      box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
+    }
     .avater {
       width: 10rem;
       height: 10rem;
-      margin: 2rem auto;
-      border: 3px solid #222;
+      margin: 1rem auto;
       border-radius: 50%;
       background:url('../assets/avater.png') center no-repeat;
       background-size: cover;
@@ -245,14 +324,14 @@ p {
     .socialMedia {
       display: flex;
       justify-content: center;
-      width: 200px;
+      width: 93%;
       margin: 1rem auto;
       padding: .2rem;
       border-radius: 20px;
       background-color: #222;
       li {
         float: left;
-        margin: 0 1rem;
+        margin: 0 1.8rem;
         a {
           color: $T-color;
           font-size: 1.4rem;
@@ -261,6 +340,7 @@ p {
     }
     .mail {
       display: inline-block;
+      width: 93%;
       margin-bottom: 1rem;
       padding: .3rem 1rem;
       border-radius: 15px;
@@ -280,20 +360,16 @@ p {
 @mixin showJob($border-color) {
   transition: all .3s;
   &:hover {
-    width: 12rem;
-    height: 12rem;
-    border: 4px solid $border-color;
-    border-radius: 10px;
-    background-color: #eee;
-    opacity: .85;
-    z-index: 2;
+    color: $T-color;
+    background-color: #222;
   }
 }
 .timeLine {
   position: relative;
+  margin-bottom: 1rem;
   .line {
     width: .5rem;
-    height: 68vh;
+    height: 63vh;
     margin: 0 auto;
     background-color: #222;
     animation-name: grow;
@@ -303,7 +379,7 @@ p {
         height: 0vh;
       }
       to {
-        height: 68vh;
+        height: 63vh;
       }
     }
   }
@@ -473,6 +549,13 @@ p {
 @media (max-width: 779.99px) {
   .col-12-mobile {
     width: 100%;
+  }
+  .section {
+    &.contact {
+        .info {
+        width: 100%;
+      }
+    }
   }
 }
 
