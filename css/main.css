@@ -21,7 +21,7 @@ hr {
   border: solid #d6b161;
   border-width: .25rem 0 0 0; }
 
-.col-3, .col-4, .col-6, .col-12 {
+.col-3, .col-4, .col-12 {
   display: inline-block;
   float: left; }
 
@@ -30,9 +30,6 @@ hr {
 
 .col-4 {
   width: 33%; }
-
-.col-6 {
-  width: 50%; }
 
 .col-12 {
   width: 100%; }
@@ -157,21 +154,35 @@ hr {
 
 .section {
   text-align: center; }
-  .section.cover .des {
-    margin-top: 5rem; }
-  .section.cover #btnGoDown {
-    margin-top: 1.5rem;
-    padding: .5rem .9rem;
-    border: 1.5px solid #222;
-    border-radius: 20px;
-    background-color: transparent;
-    color: #222;
-    -webkit-transition: all .7s;
-    -o-transition: all .7s;
-    transition: all .7s; }
-    .section.cover #btnGoDown:hover {
-      background-color: #222;
-      color: #d6b161; }
+  .section.cover {
+    background-image: url("../assets/services-bg.jpg");
+    background-repeat: no-repeat;
+    text-shadow: 0 0 0.1px rgba(0, 0, 0, 0.3); }
+    .section.cover .content {
+      display: inline-block;
+      padding: 3.5rem 1.5rem;
+      border-radius: 10px;
+      background-color: #fdfdfd;
+      opacity: .8;
+      -webkit-box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3); }
+    .section.cover .title {
+      text-transform: capitalize; }
+    .section.cover .des {
+      margin-top: 5rem; }
+    .section.cover #btnGoDown {
+      margin-top: 1.5rem;
+      padding: .5rem .9rem;
+      border: 1.5px solid #222;
+      border-radius: 20px;
+      background-color: transparent;
+      color: #222;
+      -webkit-transition: all .7s;
+      -o-transition: all .7s;
+      transition: all .7s; }
+      .section.cover #btnGoDown:hover {
+        background-color: #222;
+        color: #d6b161; }
   .section.about {
     position: relative;
     background-image: url("../assets/image1.jpeg");

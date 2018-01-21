@@ -1,9 +1,15 @@
 var listArray = [];
 
 const delBtn = document.querySelector(".list");
-delBtn.addEventListener('click',delItem);
+delBtn.addEventListener('click', delItem);
+
 const addBtn = document.querySelector(".add");
-addBtn.addEventListener('click',addItem);
+addBtn.addEventListener('click', addItem);
+document.onkeydown = (e) => {
+  if(e.keyCode = 13) {
+    addItem();
+  }
+}
 
 getList();
 
