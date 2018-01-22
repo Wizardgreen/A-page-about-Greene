@@ -5,11 +5,11 @@ delBtn.addEventListener('click', delItem);
 
 const addBtn = document.querySelector(".add");
 addBtn.addEventListener('click', addItem);
-document.onkeydown = (e) => {
-  if(e.keyCode = 13) {
-    addItem();
-  }
-}
+// document.onkeydown = (e) => {
+//   if(e.keyCode = 13) {
+//     addItem();
+//   }
+// }
 
 getList();
 

@@ -10,11 +10,11 @@ height.onblur = function(e) {blur(e)};
 weight.onfocus = function(e) {focus(e)};
 weight.onblur = function(e) {blur(e)};
 btn.addEventListener('click',pressBtn);
-document.onkeydown = (e) => {
-	if(e.keyCode = 13) {
-		pressBtn();
-	}
-}
+// document.onkeydown = (e) => {
+// 	if(e.keyCode = 13) {
+// 		pressBtn();
+// 	}
+// }
 
 getRecord();
 
