@@ -111,12 +111,9 @@ hr {
   padding: 1rem 1.5rem;
   border-radius: 10px;
   background-color: #fdfdfd;
-  opacity: .75;
+  opacity: .8;
   box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
-  z-index: 3;
-  * {
-    opacity: 1;
-  }
+  z-index: 2;
 }
 
 // main
@@ -154,7 +151,7 @@ hr {
 .section {
   text-align: center;
   &.cover {
-    background-image: url("../assets/services-bg.jpg");
+    background-image: url("../assets/cover-bg.jpg");
     background-repeat: no-repeat;
     text-shadow: 0 0 0.1px rgba(0,0,0,.3);
     .title {
@@ -179,64 +176,44 @@ hr {
   }
   &.about {
     position: relative;
-    background-image: url("../assets/image1.jpg");
+    background-image: url("../assets/about-bg.jpg");
     background-size: cover;
     background-position: 50% 40%;
     background-repeat: no-repeat;
     text-shadow: 0 0 0.1px rgba(0,0,0,.3);
     z-index: 1;
     .cap {
-      width: 100%;
-      height: 100%;
-      position: absolute;
       background-color: rgba(0,0,0,.5);
-      z-index: 2;
+      z-index: 1;
     }
     .wordCard {
-      bottom: -2rem;
+      bottom: -3rem;
+      opacity: .8;
     }
     .des {
       margin-top: 3rem;
       letter-spacing: 1px
     }
   }
-  &.skill {
-    .skillName {
-      position: relative;
-      top: -1rem;
-      margin: 0;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #222;
-      letter-spacing: 1px;
-    }
-    .html5 {
-      color: #e34f26;
-    }
-    .css3 {
-      color: #4078c0;
-    }
-    .github {
-      color: #6e5494;
-    }
-    .js {
-      color: #f7df1e;
-    }
-    .vue {
-      color: #42b883;
-    }
-    .node {
-      color: #44883e;
-    }
-    .other {
-      color: #222;
-    }
-  }
   &.experience {
+    background-image: url("../assets/exp-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .cap {
+      background-color: rgba(0,0,0,.5);
+      z-index: 1;
+    }
     .warp {
       display: flex;
       justify-content: space-between;
       width: 100%;
+    }
+    .wordCard {
+      opacity: .95;
+    }
+    .detail {
+      margin-top: 8rem;
     }
     .expCard {
       position: relative;
@@ -246,6 +223,8 @@ hr {
       border-radius: 10px;
       box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
       text-shadow: 0 0 0.1px rgba(0,0,0,.3);
+      z-index: 2;
+      opacity: .9;
       .date {
         position: absolute;
         top: 0;
@@ -288,7 +267,39 @@ hr {
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      height: 70vh;
+      height: 65vh;
+    }
+  }
+  &.skill {
+    .skillName {
+      position: relative;
+      top: -1rem;
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #222;
+      letter-spacing: 1px;
+    }
+    .html5 {
+      color: #e34f26;
+    }
+    .css3 {
+      color: #4078c0;
+    }
+    .github {
+      color: #6e5494;
+    }
+    .js {
+      color: #f7df1e;
+    }
+    .vue {
+      color: #42b883;
+    }
+    .node {
+      color: #44883e;
+    }
+    .other {
+      color: #222;
     }
   }
   &.works {
@@ -313,7 +324,7 @@ hr {
       margin: 0;
       color: #222;
       font-size: 22px;
-      font-weight: 500;
+      font-weight: 700;
       letter-spacing: 1px;
     }
   }
@@ -328,6 +339,7 @@ hr {
       background-color: #fdfdff;
       border-radius: 20px;
       box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
+      opacity: .9;
     }
     .avater {
       width: 10rem;
@@ -385,7 +397,7 @@ hr {
   position: relative;
   .line {
     width: .5rem;
-    height: 63vh;
+    height: 62vh;
     margin: 0 auto;
     background-color: #222;
     animation-name: grow;
@@ -395,7 +407,7 @@ hr {
         height: 0vh;
       }
       to {
-        height: 63vh;
+        height: 62vh;
       }
     }
   }
