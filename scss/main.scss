@@ -32,6 +32,7 @@ hr {
 }
 .col-4 {
   width: 33%;
+  float: left;
 }
 .col-12 {
   width: 100%;
@@ -308,8 +309,8 @@ hr {
       background-size: cover;
     }
     .square {
-      width: 20rem;
-      height: 13rem;
+      width: 18rem;
+      height: 10rem;
       &.BMI {
         @include work('../assets/BMI.PNG');
       }
@@ -318,6 +319,9 @@ hr {
       }
       &.travel {
         @include work('../assets/travle.PNG');
+      }
+      &.hexRest {
+        @include work('../assets/hexrest.jpg');
       }
     }
     .name {

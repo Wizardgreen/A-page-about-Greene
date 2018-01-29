@@ -29,7 +29,8 @@ hr {
   float: left; }
 
 .col-4 {
-  width: 33%; }
+  width: 33%;
+  float: left; }
 
 .col-12 {
   width: 100%; }
@@ -299,8 +300,8 @@ hr {
   .section.skill .other {
     color: #222; }
   .section.works .square {
-    width: 20rem;
-    height: 13rem; }
+    width: 18rem;
+    height: 10rem; }
     .section.works .square.BMI {
       background: url("../assets/BMI.PNG") center top no-repeat;
       background-size: cover; }
@@ -309,6 +310,9 @@ hr {
       background-size: cover; }
     .section.works .square.travel {
       background: url("../assets/travle.PNG") center top no-repeat;
+      background-size: cover; }
+    .section.works .square.hexRest {
+      background: url("../assets/hexrest.jpg") center top no-repeat;
       background-size: cover; }
   .section.works .name {
     margin: 0;
