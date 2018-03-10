@@ -323,6 +323,9 @@ hr {
       &.hexRest {
         @include work('../assets/hexrest.jpg');
       }
+      &.mailer {
+        @include work('../assets/mailer.PNG');
+      }
     }
     .name {
       margin: 0;

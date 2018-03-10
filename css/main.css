@@ -314,6 +314,9 @@ hr {
     .section.works .square.hexRest {
       background: url("../assets/hexrest.jpg") center top no-repeat;
       background-size: cover; }
+    .section.works .square.mailer {
+      background: url("../assets/mailer.PNG") center top no-repeat;
+      background-size: cover; }
   .section.works .name {
     margin: 0;
     color: #222;
