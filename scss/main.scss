@@ -326,6 +326,9 @@ hr {
       &.mailer {
         @include work('../assets/mailer.PNG');
       }
+      &.VueTodo {
+        @include work('../assets/vueTodo.PNG');
+      }
     }
     .name {
       margin: 0;
